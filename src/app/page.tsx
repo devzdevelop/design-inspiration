@@ -115,6 +115,13 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🎯',
 	},
 	{
+		name: 'ChatGPT',
+		url: 'https://chat.openai.com',
+		description: 'AI assistant for writing, ideation, and problem-solving',
+		category: 'productivity',
+		icon: '🧠',
+	},
+	{
 		name: 'Notion',
 		url: 'https://www.notion.so',
 		description: 'All-in-one workspace for notes, docs, and projects',
@@ -122,11 +129,20 @@ const inspirationSites: InspirationSite[] = [
 		icon: '📝',
 	},
 	{
-		name: 'Mobbin',
-		url: 'https://mobbin.com',
-		description: 'Mobile app design patterns',
+		name: 'Rapid Proposals',
+		url: 'https://rapidproposals.com',
+		description:
+			'AI-powered proposal generator for freelancers - create winning Upwork proposals in seconds',
+		category: 'productivity',
+		icon: '⚡',
+	},
+	{
+		name: 'MaxiBestOf',
+		url: 'https://maxibestof.one',
+		description:
+			'Daily website design inspiration feed with 12,500+ UI components',
 		category: 'general',
-		icon: '📱',
+		icon: '⭐',
 	},
 	{
 		name: 'Feather Icons',
@@ -268,18 +284,25 @@ const inspirationSites: InspirationSite[] = [
 
 	// Photos & Stock Images
 	{
-		name: 'Unsplash',
-		url: 'https://unsplash.com',
-		description: 'Beautiful free photos from talented photographers',
+		name: 'Midjourney',
+		url: 'https://www.midjourney.com',
+		description: 'AI-powered image generation for creative projects',
 		category: 'photos',
-		icon: '📸',
+		icon: '🎨',
 	},
 	{
-		name: 'Pexels',
-		url: 'https://www.pexels.com',
-		description: 'Free stock photos and videos',
+		name: 'DALL-E 3',
+		url: 'https://openai.com/dall-e-3',
+		description: 'OpenAI AI image generator with high-quality results',
 		category: 'photos',
-		icon: '🎬',
+		icon: '🤖',
+	},
+	{
+		name: 'Stable Diffusion',
+		url: 'https://stablediffusionweb.com',
+		description: 'Open-source AI image generation platform',
+		category: 'photos',
+		icon: '🌀',
 	},
 	{
 		name: 'Burst',
@@ -516,6 +539,14 @@ const inspirationSites: InspirationSite[] = [
 		icon: '💼',
 	},
 	{
+		name: 'MaxiBestOf',
+		url: 'https://maxibestof.one',
+		description:
+			'Daily website design inspiration feed with 12,500+ UI components',
+		category: 'general',
+		icon: '⭐',
+	},
+	{
 		name: 'Awwwards',
 		url: 'https://www.awwwards.com',
 		description: 'The awards for design, creativity and innovation',
@@ -558,14 +589,6 @@ const inspirationSites: InspirationSite[] = [
 		icon: '💳',
 	},
 	{
-		name: 'Rapid Proposals',
-		url: 'https://rapidproposals.com',
-		description:
-			'AI-powered proposal generator for freelancers - create winning Upwork proposals in seconds',
-		category: 'productivity',
-		icon: '⚡',
-	},
-	{
 		name: 'Slack',
 		url: 'https://slack.com',
 		description: 'Team communication and collaboration platform',
@@ -592,6 +615,34 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Cloud storage and collaboration tools',
 		category: 'productivity',
 		icon: '☁️',
+	},
+	{
+		name: 'Claude',
+		url: 'https://claude.ai',
+		description: 'Anthropic AI assistant for creative and analytical tasks',
+		category: 'productivity',
+		icon: '🤖',
+	},
+	{
+		name: 'Perplexity',
+		url: 'https://perplexity.ai',
+		description: 'AI-powered search engine with real-time information',
+		category: 'productivity',
+		icon: '🔍',
+	},
+	{
+		name: 'v0.dev',
+		url: 'https://v0.dev',
+		description: 'AI-powered website design generator from text descriptions',
+		category: 'productivity',
+		icon: '⚡',
+	},
+	{
+		name: 'Relume',
+		url: 'https://relume.io',
+		description: 'AI-powered design tool with vast prebuilt components library',
+		category: 'productivity',
+		icon: '🎨',
 	},
 	{
 		name: 'Godly',
@@ -776,6 +827,27 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Free 3D creation suite with web export options',
 		category: '3d',
 		icon: '🎬',
+	},
+	{
+		name: 'Luma AI',
+		url: 'https://lumalabs.ai',
+		description: 'AI-powered 3D capture and generation from photos',
+		category: '3d',
+		icon: '📱',
+	},
+	{
+		name: 'Kaedim',
+		url: 'https://www.kaedim3d.com',
+		description: 'AI that converts 2D images to 3D models',
+		category: '3d',
+		icon: '🔄',
+	},
+	{
+		name: 'Meshy',
+		url: 'https://www.meshy.ai',
+		description: 'AI-powered 3D model generation and texturing',
+		category: '3d',
+		icon: '🎯',
 	},
 
 	// Brand Assets
@@ -1059,6 +1131,120 @@ const inspirationSites: InspirationSite[] = [
 		category: 'webflow',
 		icon: '💼',
 	},
+
+	// Font Foundries
+	{
+		name: 'Adobe Fonts',
+		url: 'https://fonts.adobe.com',
+		description: 'Premium font library with unlimited access',
+		category: 'foundries',
+		icon: '🎨',
+	},
+	{
+		name: 'Pangram Pangram',
+		url: 'https://pangrampangram.com',
+		description: 'Trend-conscious fonts with 71 typefaces and 950+ styles',
+		category: 'foundries',
+		icon: '📝',
+	},
+	{
+		name: 'Fontshare',
+		url: 'https://www.fontshare.com',
+		description: 'Free fonts for designers by Indian Type Foundry',
+		category: 'foundries',
+		icon: '🇮🇳',
+	},
+	{
+		name: 'Recursive',
+		url: 'https://www.recursive.design',
+		description: 'Variable font with multiple styles and weights',
+		category: 'foundries',
+		icon: '🔄',
+	},
+	{
+		name: 'Future Fonts',
+		url: 'https://www.futurefonts.xyz',
+		description: 'Experimental and cutting-edge typefaces',
+		category: 'foundries',
+		icon: '🚀',
+	},
+	{
+		name: 'Velvetyne',
+		url: 'https://velvetyne.fr',
+		description: 'Free and open-source typefaces',
+		category: 'foundries',
+		icon: '🆓',
+	},
+	{
+		name: 'Oh No Type Co',
+		url: 'https://ohnotype.co',
+		description: 'Contemporary typefaces with personality',
+		category: 'foundries',
+		icon: '😎',
+	},
+	{
+		name: 'Displaay',
+		url: 'https://displaay.com',
+		description: 'Modern display fonts and typefaces',
+		category: 'foundries',
+		icon: '💫',
+	},
+	{
+		name: 'Typefaces',
+		url: 'https://typefaces.xyz',
+		description: 'Curated collection of open-source fonts',
+		category: 'foundries',
+		icon: '📚',
+	},
+	{
+		name: 'Google Fonts',
+		url: 'https://fonts.google.com',
+		description: 'Free web fonts for everyone',
+		category: 'foundries',
+		icon: '🔍',
+	},
+	{
+		name: 'Grilli Type',
+		url: 'https://www.grillitype.com',
+		description: 'Contemporary Swiss typefaces with free trials',
+		category: 'foundries',
+		icon: '🇨🇭',
+	},
+	{
+		name: 'House Industries',
+		url: 'https://houseind.com',
+		description: 'Iconic American type foundry with distinctive fonts',
+		category: 'foundries',
+		icon: '🏠',
+	},
+	{
+		name: 'Dinamo',
+		url: 'https://www.dinamofonts.com',
+		description: 'Contemporary Swiss typefaces with experimental edge',
+		category: 'foundries',
+		icon: '⚡',
+	},
+	{
+		name: 'Sharp Type',
+		url: 'https://sharptype.co',
+		description: 'Modern typefaces with sharp, distinctive character',
+		category: 'foundries',
+		icon: '🔺',
+	},
+	{
+		name: 'Klim Type Foundry',
+		url: 'https://klim.co.nz',
+		description: 'New Zealand-based foundry with distinctive typefaces',
+		category: 'foundries',
+		icon: '🇳🇿',
+	},
+	{
+		name: 'Hoefler & Co',
+		url: 'https://www.typography.com',
+		description: 'Premium typefaces for professional design',
+		category: 'foundries',
+		icon: '✨',
+	},
 ];
 
 const categories = [
@@ -1136,6 +1322,12 @@ const categories = [
 		icon: Globe,
 		color: 'text-primary',
 	},
+	{
+		id: 'foundries',
+		name: 'Font Foundries',
+		icon: Type,
+		color: 'text-primary',
+	},
 ];
 
 export default function Home() {
@@ -1164,7 +1356,7 @@ export default function Home() {
 		setCurrentPage(1);
 	}, [searchTerm, selectedCategory]);
 
-  return (
+	return (
 		<div className='min-h-screen bg-background'>
 			<Header />
 
@@ -1267,7 +1459,7 @@ export default function Home() {
 							</span>
 						</a>
 					))}
-        </div>
+				</div>
 
 				{/* Pagination Controls */}
 				{totalPages > 1 && (
@@ -1340,7 +1532,7 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-      </footer>
-    </div>
-  );
+			</footer>
+		</div>
+	);
 }
