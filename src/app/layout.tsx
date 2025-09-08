@@ -14,9 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'DesignInspo - Your Centralized Design Inspiration Hub',
+	title: 'DesignHub - Your Centralized Design Inspiration Hub',
 	description:
 		'Discover the best design inspiration websites for typography, colors, shapes, gradients, textures, and more. Your one-stop destination for creative inspiration.',
+	icons: {
+		icon: '/favicon.svg',
+		shortcut: '/favicon.svg',
+		apple: '/favicon.svg',
+	},
 };
 
 export default function RootLayout({

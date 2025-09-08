@@ -17,7 +17,10 @@ export function Header() {
 			<div className='w-full px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between'>
 				<div className='flex items-center space-x-2'>
 					<div className='flex items-center space-x-2'>
-						<Sparkles className='h-7 w-7 text-primary' />
+						<Sparkles
+							className='h-7 w-7'
+							style={{ color: '#6366f1' }}
+						/>
 						<span className='text-2xl font-bold text-primary'>DesignHub</span>
 					</div>
 				</div>

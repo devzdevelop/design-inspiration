@@ -268,48 +268,6 @@ const inspirationSites: InspirationSite[] = [
 
 	// General Design
 	{
-		name: 'Godly',
-		url: 'https://godly.website',
-		description: 'Curated collection of the best web design inspiration',
-		category: 'general',
-		icon: '⚡',
-	},
-	{
-		name: 'Limitless',
-		url: 'https://limitless.website',
-		description: 'Unlimited design inspiration for creative minds',
-		category: 'general',
-		icon: '♾️',
-	},
-	{
-		name: 'Siteinspire',
-		url: 'https://www.siteinspire.com',
-		description: 'A showcase of the finest web and interactive design',
-		category: 'general',
-		icon: '🔴',
-	},
-	{
-		name: 'Best Website Design',
-		url: 'https://www.bestwebsite.gallery',
-		description: 'Curated collection of the best website designs',
-		category: 'general',
-		icon: '➕',
-	},
-	{
-		name: 'Ecommerce Design',
-		url: 'https://ecommerce.design',
-		description: 'E-commerce design inspiration and examples',
-		category: 'general',
-		icon: '🛒',
-	},
-	{
-		name: 'Awwwards',
-		url: 'https://www.awwwards.com',
-		description: 'The awards for design, creativity and innovation',
-		category: 'general',
-		icon: '🏆',
-	},
-	{
 		name: 'Dribbble',
 		url: 'https://dribbble.com',
 		description: "Discover the world's top designers & creatives",
@@ -324,6 +282,20 @@ const inspirationSites: InspirationSite[] = [
 		icon: '💼',
 	},
 	{
+		name: 'Awwwards',
+		url: 'https://www.awwwards.com',
+		description: 'The awards for design, creativity and innovation',
+		category: 'general',
+		icon: '🏆',
+	},
+	{
+		name: 'Pinterest',
+		url: 'https://pinterest.com',
+		description: 'Visual discovery platform for design inspiration',
+		category: 'general',
+		icon: '📌',
+	},
+	{
 		name: 'Mobbin',
 		url: 'https://mobbin.com',
 		description: 'Mobile app design patterns',
@@ -331,11 +303,11 @@ const inspirationSites: InspirationSite[] = [
 		icon: '📱',
 	},
 	{
-		name: 'Page Flows',
-		url: 'https://pageflows.com',
-		description: 'User flow design inspiration',
+		name: 'Godly',
+		url: 'https://godly.website',
+		description: 'Curated collection of the best web design inspiration',
 		category: 'general',
-		icon: '🌊',
+		icon: '⚡',
 	},
 	{
 		name: 'Landingfolio',
@@ -352,6 +324,27 @@ const inspirationSites: InspirationSite[] = [
 		icon: '💝',
 	},
 	{
+		name: 'Land-book',
+		url: 'https://land-book.com',
+		description: 'Showcase of the best landing pages',
+		category: 'general',
+		icon: '📖',
+	},
+	{
+		name: 'Page Flows',
+		url: 'https://pageflows.com',
+		description: 'User flow design inspiration',
+		category: 'general',
+		icon: '🌊',
+	},
+	{
+		name: 'Webflow Showcase',
+		url: 'https://webflow.com/made-in-webflow',
+		description: 'Live websites built with Webflow',
+		category: 'general',
+		icon: '🌊',
+	},
+	{
 		name: 'CSS Nectar',
 		url: 'https://cssnectar.com',
 		description: 'Curated collection of the best CSS websites',
@@ -366,11 +359,11 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🏅',
 	},
 	{
-		name: 'Land-book',
-		url: 'https://land-book.com',
-		description: 'Showcase of the best landing pages',
+		name: 'Siteinspire',
+		url: 'https://www.siteinspire.com',
+		description: 'A showcase of the finest web and interactive design',
 		category: 'general',
-		icon: '📖',
+		icon: '🔴',
 	},
 	{
 		name: 'Designspiration',
@@ -380,11 +373,18 @@ const inspirationSites: InspirationSite[] = [
 		icon: '💡',
 	},
 	{
-		name: 'Webflow Showcase',
-		url: 'https://webflow.com/showcase',
-		description: 'Live websites built with Webflow',
+		name: 'Best Website Design',
+		url: 'https://www.bestwebsite.gallery',
+		description: 'Curated collection of the best website designs',
 		category: 'general',
-		icon: '🌊',
+		icon: '➕',
+	},
+	{
+		name: 'Ecommerce Design',
+		url: 'https://ecommerce.design',
+		description: 'E-commerce design inspiration and examples',
+		category: 'general',
+		icon: '🛒',
 	},
 	{
 		name: 'Designmodo',
@@ -392,6 +392,13 @@ const inspirationSites: InspirationSite[] = [
 		description: 'UI kits, frameworks, and design inspiration',
 		category: 'general',
 		icon: '🎨',
+	},
+	{
+		name: 'Limitless',
+		url: 'https://limitless.website',
+		description: 'Unlimited design inspiration for creative minds',
+		category: 'general',
+		icon: '♾️',
 	},
 ];
 
@@ -451,7 +458,10 @@ export default function Home() {
 				{/* Hero Section */}
 				<div className='text-center py-16'>
 					<div className='flex items-center justify-center mb-6'>
-						<Sparkles className='h-16 w-16 text-primary mr-6' />
+						<Sparkles
+							className='h-16 w-16 mr-6'
+							style={{ color: '#6366f1' }}
+						/>
 						<h1 className='text-7xl font-bold text-primary'>DesignHub</h1>
 					</div>
 					<p className='text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-medium'>
