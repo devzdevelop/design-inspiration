@@ -26,6 +26,9 @@ interface InspirationSite {
 	description: string;
 	category: string;
 	icon: string;
+	affiliateUrl?: string;
+	isAffiliate?: boolean;
+	isSponsored?: boolean;
 }
 
 const inspirationSites: InspirationSite[] = [
@@ -33,9 +36,12 @@ const inspirationSites: InspirationSite[] = [
 	{
 		name: 'Figma',
 		url: 'https://www.figma.com',
+		affiliateUrl: 'https://www.figma.com?ref=designhub-123',
 		description: 'Collaborative interface design tool',
 		category: 'productivity',
 		icon: '🔺',
+		isAffiliate: false,
+		isSponsored: false,
 	},
 	{
 		name: 'Dribbble',
@@ -124,9 +130,12 @@ const inspirationSites: InspirationSite[] = [
 	{
 		name: 'Notion',
 		url: 'https://www.notion.so',
+		affiliateUrl: 'https://www.notion.so?ref=designhub-123',
 		description: 'All-in-one workspace for notes, docs, and projects',
 		category: 'productivity',
 		icon: '📝',
+		isAffiliate: false,
+		isSponsored: false,
 	},
 	{
 		name: 'Rapid Proposals',
@@ -1437,11 +1446,30 @@ export default function Home() {
 					{currentSites.map((site, index) => (
 						<a
 							key={index}
-							href={site.url}
+							href={site.affiliateUrl || site.url}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='group block p-4 sm:p-5 lg:p-6 border border-border rounded-lg bg-card hover:bg-accent transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer'
+							onClick={() => {
+								if (site.isAffiliate) {
+									console.log(`Affiliate click: ${site.name}`);
+									// You can add Google Analytics tracking here
+								}
+							}}
+							className='group block p-4 sm:p-5 lg:p-6 border border-border rounded-lg bg-card hover:bg-accent transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer relative'
 						>
+							{/* Sponsored badge */}
+							{site.isSponsored && (
+								<span className='absolute bottom-2 right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded-full z-10'>
+									Sponsored
+								</span>
+							)}
+
+							{/* Affiliate badge */}
+							{site.isAffiliate && !site.isSponsored && (
+								<span className='absolute bottom-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full z-10'>
+									Affiliate
+								</span>
+							)}
 							<div className='flex items-start justify-between mb-2 sm:mb-3'>
 								<div className='flex items-center space-x-2 sm:space-x-3'>
 									<span className='text-xl sm:text-2xl'>{site.icon}</span>
