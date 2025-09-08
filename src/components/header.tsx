@@ -25,7 +25,7 @@ export function Header() {
 					</div>
 				</div>
 
-				<nav className='hidden md:flex items-center space-x-6'>
+				<nav className='hidden md:flex items-center space-x-4 lg:space-x-6'>
 					<button
 						onClick={() => {
 							const filterButtons = document.querySelectorAll(
@@ -41,25 +41,7 @@ export function Header() {
 						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
 					>
 						<Layout className='h-4 w-4' />
-						<span>General Design</span>
-						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
-					</button>
-					<button
-						onClick={() => {
-							const filterButtons = document.querySelectorAll(
-								'[data-category="typography"]'
-							);
-							if (filterButtons.length > 0) {
-								(filterButtons[0] as HTMLButtonElement).click();
-								document
-									.getElementById('filters')
-									?.scrollIntoView({ behavior: 'smooth' });
-							}
-						}}
-						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
-					>
-						<Type className='h-4 w-4' />
-						<span>Typography</span>
+						<span>General</span>
 						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
 					</button>
 					<button
@@ -83,7 +65,43 @@ export function Header() {
 					<button
 						onClick={() => {
 							const filterButtons = document.querySelectorAll(
-								'[data-category="shapes"]'
+								'[data-category="typography"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Type className='h-4 w-4' />
+						<span>Typography</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
+								'[data-category="brand"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Palette className='h-4 w-4' />
+						<span>Brand</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
+								'[data-category="3d"]'
 							);
 							if (filterButtons.length > 0) {
 								(filterButtons[0] as HTMLButtonElement).click();
@@ -95,61 +113,7 @@ export function Header() {
 						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
 					>
 						<Shapes className='h-4 w-4' />
-						<span>Shapes</span>
-						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
-					</button>
-					<button
-						onClick={() => {
-							const filterButtons = document.querySelectorAll(
-								'[data-category="gradients"]'
-							);
-							if (filterButtons.length > 0) {
-								(filterButtons[0] as HTMLButtonElement).click();
-								document
-									.getElementById('filters')
-									?.scrollIntoView({ behavior: 'smooth' });
-							}
-						}}
-						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
-					>
-						<Layers className='h-4 w-4' />
-						<span>Gradients</span>
-						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
-					</button>
-					<button
-						onClick={() => {
-							const filterButtons = document.querySelectorAll(
-								'[data-category="textures"]'
-							);
-							if (filterButtons.length > 0) {
-								(filterButtons[0] as HTMLButtonElement).click();
-								document
-									.getElementById('filters')
-									?.scrollIntoView({ behavior: 'smooth' });
-							}
-						}}
-						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
-					>
-						<ImageIcon className='h-4 w-4' />
-						<span>Textures</span>
-						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
-					</button>
-					<button
-						onClick={() => {
-							const filterButtons = document.querySelectorAll(
-								'[data-category="patterns"]'
-							);
-							if (filterButtons.length > 0) {
-								(filterButtons[0] as HTMLButtonElement).click();
-								document
-									.getElementById('filters')
-									?.scrollIntoView({ behavior: 'smooth' });
-							}
-						}}
-						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
-					>
-						<Layers className='h-4 w-4' />
-						<span>Patterns</span>
+						<span>3D</span>
 						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
 					</button>
 				</nav>

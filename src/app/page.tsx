@@ -400,6 +400,178 @@ const inspirationSites: InspirationSite[] = [
 		category: 'general',
 		icon: '♾️',
 	},
+
+	// 3D Web Design
+	{
+		name: 'Spline',
+		url: 'https://spline.design',
+		description: '3D design tool specifically for web and mobile',
+		category: '3d',
+		icon: '🎨',
+	},
+	{
+		name: 'Three.js',
+		url: 'https://threejs.org',
+		description: 'JavaScript 3D library for web development',
+		category: '3d',
+		icon: '📦',
+	},
+	{
+		name: 'R3F',
+		url: 'https://docs.pmnd.rs/react-three-fiber',
+		description: 'React renderer for Three.js web projects',
+		category: '3d',
+		icon: '⚛️',
+	},
+	{
+		name: 'Figma 3D',
+		url: 'https://www.figma.com/community/tag/3d',
+		description: '3D components and plugins for Figma web design',
+		category: '3d',
+		icon: '🔺',
+	},
+	{
+		name: 'LottieFiles',
+		url: 'https://lottiefiles.com',
+		description: '3D animations for web and mobile interfaces',
+		category: '3d',
+		icon: '🎭',
+	},
+	{
+		name: 'A-Frame',
+		url: 'https://aframe.io',
+		description: 'Web framework for VR experiences in browsers',
+		category: '3d',
+		icon: '🌐',
+	},
+	{
+		name: 'WebXR',
+		url: 'https://immersiveweb.dev',
+		description: 'Web-based VR and AR for websites',
+		category: '3d',
+		icon: '🥽',
+	},
+	{
+		name: 'Vectary',
+		url: 'https://www.vectary.com',
+		description: 'Online 3D design with web export capabilities',
+		category: '3d',
+		icon: '🔮',
+	},
+	{
+		name: 'Sketchfab',
+		url: 'https://sketchfab.com',
+		description: '3D model viewer for embedding in websites',
+		category: '3d',
+		icon: '🏛️',
+	},
+	{
+		name: 'Poly Haven',
+		url: 'https://polyhaven.com',
+		description: 'Free 3D assets optimized for web use',
+		category: '3d',
+		icon: '🏔️',
+	},
+	{
+		name: 'Ready Player Me',
+		url: 'https://readyplayer.me',
+		description: '3D avatars for web and metaverse projects',
+		category: '3d',
+		icon: '👤',
+	},
+	{
+		name: 'Blender',
+		url: 'https://www.blender.org',
+		description: 'Free 3D creation suite with web export options',
+		category: '3d',
+		icon: '🎬',
+	},
+
+	// Brand Assets
+	{
+		name: 'Brand Guidelines',
+		url: 'https://brandguidelines.com',
+		description: 'Free collection of brand guidelines and style guides',
+		category: 'brand',
+		icon: '📋',
+	},
+	{
+		name: 'Brand New',
+		url: 'https://www.underconsideration.com/brandnew',
+		description: 'Free brand identity and logo design inspiration',
+		category: 'brand',
+		icon: '🆕',
+	},
+	{
+		name: 'Logo Design Love',
+		url: 'https://www.logodesignlove.com',
+		description: 'Free logo design inspiration and case studies',
+		category: 'brand',
+		icon: '❤️',
+	},
+	{
+		name: 'Brandmark',
+		url: 'https://brandmark.io',
+		description: 'Free AI-powered logo generator and brand kit creator',
+		category: 'brand',
+		icon: '🤖',
+	},
+	{
+		name: 'Looka',
+		url: 'https://looka.com',
+		description: 'Free AI logo maker and brand identity platform',
+		category: 'brand',
+		icon: '👁️',
+	},
+	{
+		name: 'Canva Brand Kit',
+		url: 'https://www.canva.com/brand-kit',
+		description: 'Free brand kit and style guide templates',
+		category: 'brand',
+		icon: '🎨',
+	},
+	{
+		name: 'Figma Brand Templates',
+		url: 'https://www.figma.com/community/tag/brand',
+		description: 'Free brand guidelines and identity templates',
+		category: 'brand',
+		icon: '🔺',
+	},
+	{
+		name: 'Logo Maker',
+		url: 'https://logomaker.com',
+		description: 'Free logo design tool with brand assets',
+		category: 'brand',
+		icon: '✏️',
+	},
+	{
+		name: 'Hatchful',
+		url: 'https://hatchful.shopify.com',
+		description: 'Free logo maker by Shopify',
+		category: 'brand',
+		icon: '🛍️',
+	},
+	{
+		name: 'Brand Colors',
+		url: 'https://brandcolors.net',
+		description: 'Free official brand color palettes and hex codes',
+		category: 'brand',
+		icon: '🎨',
+	},
+	{
+		name: 'Google Fonts',
+		url: 'https://fonts.google.com',
+		description: 'Free typography for brand identity',
+		category: 'brand',
+		icon: '📝',
+	},
+	{
+		name: 'Font Squirrel',
+		url: 'https://www.fontsquirrel.com',
+		description: 'Free commercial-use fonts for brands',
+		category: 'brand',
+		icon: '🔤',
+	},
 ];
 
 const categories = [
@@ -435,6 +607,18 @@ const categories = [
 		icon: Layers,
 		color: 'text-pink-600',
 	},
+	{
+		id: '3d',
+		name: '3D Design',
+		icon: Shapes,
+		color: 'text-cyan-600',
+	},
+	{
+		id: 'brand',
+		name: 'Brand Assets',
+		icon: Palette,
+		color: 'text-emerald-600',
+	},
 ];
 
 export default function Home() {
@@ -454,31 +638,33 @@ export default function Home() {
 		<div className='min-h-screen bg-background'>
 			<Header />
 
-			<main className='container mx-auto px-4 py-8'>
+			<main className='container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12'>
 				{/* Hero Section */}
-				<div className='text-center py-16'>
-					<div className='flex items-center justify-center mb-6'>
+				<div className='text-center py-8 sm:py-12 lg:py-16'>
+					<div className='flex flex-col sm:flex-row items-center justify-center mb-4 sm:mb-6 space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-6'>
 						<Sparkles
-							className='h-16 w-16 mr-6'
+							className='h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16'
 							style={{ color: '#6366f1' }}
 						/>
-						<h1 className='text-7xl font-bold text-primary'>DesignHub</h1>
+						<h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-primary'>
+							DesignHub
+						</h1>
 					</div>
-					<p className='text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-medium'>
-						Your ultimate destination for design inspiration. Discover the best
-						websites for typography, colors, shapes, gradients, textures, and
-						more.
+					<p className='text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto font-medium px-4'>
+						Your comprehensive design toolkit. Discover inspiration, tools, and
+						resources for typography, colors, 3D design, brand assets, and
+						everything you need to create amazing designs.
 					</p>
 
 					{/* Search Bar */}
-					<div className='relative max-w-md mx-auto mb-8'>
-						<Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4' />
+					<div className='relative max-w-sm sm:max-w-md mx-auto mb-6 sm:mb-8 px-4'>
+						<Search className='absolute left-6 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4' />
 						<input
 							type='text'
-							placeholder='Search inspiration sources...'
+							placeholder='Search design tools and inspiration...'
 							value={searchTerm}
 							onChange={(e) => setSearchTerm(e.target.value)}
-							className='w-full pl-10 pr-4 py-3 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent'
+							className='w-full pl-10 pr-4 py-2.5 sm:py-3 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent text-sm sm:text-base'
 						/>
 					</div>
 				</div>
@@ -486,11 +672,11 @@ export default function Home() {
 				{/* Category Filter */}
 				<div
 					id='filters'
-					className='flex flex-wrap justify-center gap-2 mb-12'
+					className='flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 lg:mb-12 px-4'
 				>
 					<button
 						onClick={() => setSelectedCategory('all')}
-						className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer relative group ${
+						className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer relative group ${
 							selectedCategory === 'all'
 								? 'bg-primary text-primary-foreground shadow-md'
 								: 'bg-muted text-muted-foreground hover:bg-muted/80 hover:shadow-sm'
@@ -508,7 +694,7 @@ export default function Home() {
 								key={category.id}
 								data-category={category.id}
 								onClick={() => setSelectedCategory(category.id)}
-								className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer relative group ${
+								className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer relative group ${
 									selectedCategory === category.id
 										? 'bg-primary text-primary-foreground shadow-md'
 										: 'bg-muted text-muted-foreground hover:bg-muted/80 hover:shadow-sm'
@@ -525,25 +711,25 @@ export default function Home() {
 				</div>
 
 				{/* Inspiration Grid */}
-				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6'>
 					{filteredSites.map((site, index) => (
 						<a
 							key={index}
 							href={site.url}
 							target='_blank'
 							rel='noopener noreferrer'
-							className='group block p-6 border border-border rounded-lg bg-card hover:bg-accent transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer'
+							className='group block p-4 sm:p-5 lg:p-6 border border-border rounded-lg bg-card hover:bg-accent transition-all duration-200 hover:shadow-lg hover:scale-105 cursor-pointer'
 						>
-							<div className='flex items-start justify-between mb-3'>
-								<div className='flex items-center space-x-3'>
-									<span className='text-2xl'>{site.icon}</span>
-									<h3 className='font-semibold text-lg group-hover:text-primary transition-colors'>
+							<div className='flex items-start justify-between mb-2 sm:mb-3'>
+								<div className='flex items-center space-x-2 sm:space-x-3'>
+									<span className='text-xl sm:text-2xl'>{site.icon}</span>
+									<h3 className='font-semibold text-base sm:text-lg group-hover:text-primary transition-colors'>
 										{site.name}
 									</h3>
 								</div>
-								<ExternalLink className='h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors' />
+								<ExternalLink className='h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0' />
 							</div>
-							<p className='text-muted-foreground text-sm mb-3'>
+							<p className='text-muted-foreground text-xs sm:text-sm mb-2 sm:mb-3 leading-relaxed'>
 								{site.description}
 							</p>
 							<span className='inline-block px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full'>
@@ -556,19 +742,19 @@ export default function Home() {
 				{filteredSites.length === 0 && (
 					<div className='text-center py-16'>
 						<p className='text-muted-foreground text-lg'>
-							No inspiration sources found matching your search.
+							No design tools or inspiration found matching your search.
 						</p>
 					</div>
 				)}
 			</main>
 
 			{/* Footer */}
-			<footer className='border-t bg-muted/50 mt-16'>
-				<div className='container mx-auto px-4 py-8'>
+			<footer className='border-t bg-muted/50 mt-12 sm:mt-16'>
+				<div className='container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8'>
 					<div className='text-center text-muted-foreground'>
 						<p className='mb-2'>Made with ❤️ for designers and developers</p>
 						<p className='text-sm'>
-							Your one-stop destination for design inspiration
+							Your comprehensive design toolkit for inspiration and tools
 						</p>
 					</div>
 				</div>
