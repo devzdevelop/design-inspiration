@@ -9,6 +9,11 @@ import {
 	Layers,
 	Image as ImageIcon,
 	Layout,
+	Camera,
+	BookOpen,
+	Zap,
+	Briefcase,
+	Globe,
 } from 'lucide-react';
 
 export function Header() {
@@ -25,7 +30,7 @@ export function Header() {
 					</div>
 				</div>
 
-				<nav className='hidden md:flex items-center space-x-4 lg:space-x-6'>
+				<nav className='hidden md:flex items-center space-x-3 lg:space-x-4'>
 					<button
 						onClick={() => {
 							const filterButtons = document.querySelectorAll(
@@ -41,7 +46,7 @@ export function Header() {
 						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
 					>
 						<Layout className='h-4 w-4' />
-						<span>General</span>
+						<span>Inspiration</span>
 						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
 					</button>
 					<button
@@ -83,6 +88,42 @@ export function Header() {
 					<button
 						onClick={() => {
 							const filterButtons = document.querySelectorAll(
+								'[data-category="shapes"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Shapes className='h-4 w-4' />
+						<span>Icons</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
+								'[data-category="photos"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Camera className='h-4 w-4' />
+						<span>Photos</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
 								'[data-category="brand"]'
 							);
 							if (filterButtons.length > 0) {
@@ -114,6 +155,42 @@ export function Header() {
 					>
 						<Shapes className='h-4 w-4' />
 						<span>3D</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
+								'[data-category="jobs"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Briefcase className='h-4 w-4' />
+						<span>Jobs</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
+								'[data-category="webflow"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Globe className='h-4 w-4' />
+						<span>Webflow</span>
 						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
 					</button>
 				</nav>

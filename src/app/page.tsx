@@ -11,8 +11,14 @@ import {
 	Image as ImageIcon,
 	Layout,
 	Sparkles,
+	Camera,
+	BookOpen,
+	Zap,
+	Briefcase,
+	Globe,
 } from 'lucide-react';
 import { useState } from 'react';
+import * as React from 'react';
 
 interface InspirationSite {
 	name: string;
@@ -23,13 +29,169 @@ interface InspirationSite {
 }
 
 const inspirationSites: InspirationSite[] = [
-	// Typography
+	// Most Popular/Trendy Resources (All Categories)
+	{
+		name: 'Figma',
+		url: 'https://www.figma.com',
+		description: 'Collaborative interface design tool',
+		category: 'productivity',
+		icon: '🔺',
+	},
+	{
+		name: 'Dribbble',
+		url: 'https://dribbble.com',
+		description: "Discover the world's top designers & creatives",
+		category: 'general',
+		icon: '🏀',
+	},
 	{
 		name: 'Google Fonts',
 		url: 'https://fonts.google.com',
 		description: 'Extensive collection of free web fonts',
 		category: 'typography',
 		icon: '🔤',
+	},
+	{
+		name: 'Unsplash',
+		url: 'https://unsplash.com',
+		description: 'Beautiful free photos from talented photographers',
+		category: 'photos',
+		icon: '📸',
+	},
+	{
+		name: 'Coolors',
+		url: 'https://coolors.co',
+		description: 'Color palette generator and inspiration',
+		category: 'colors',
+		icon: '🎨',
+	},
+	{
+		name: 'Behance',
+		url: 'https://www.behance.net',
+		description: 'Showcase and discover creative work',
+		category: 'general',
+		icon: '💼',
+	},
+	{
+		name: 'Material Icons',
+		url: 'https://fonts.google.com/icons',
+		description: 'Google Material Design icons',
+		category: 'shapes',
+		icon: '🔷',
+	},
+	{
+		name: 'Pexels',
+		url: 'https://www.pexels.com',
+		description: 'Free stock photos and videos',
+		category: 'photos',
+		icon: '🎬',
+	},
+	{
+		name: 'Awwwards',
+		url: 'https://www.awwwards.com',
+		description: 'The awards for design, creativity and innovation',
+		category: 'general',
+		icon: '🏆',
+	},
+	{
+		name: 'Heroicons',
+		url: 'https://heroicons.com',
+		description: 'Beautiful hand-crafted SVG icons',
+		category: 'shapes',
+		icon: '🦸',
+	},
+	{
+		name: 'Pinterest',
+		url: 'https://pinterest.com',
+		description: 'Visual discovery platform for design inspiration',
+		category: 'general',
+		icon: '📌',
+	},
+	{
+		name: 'Color Hunt',
+		url: 'https://colorhunt.co',
+		description: 'Curated color palettes',
+		category: 'colors',
+		icon: '🎯',
+	},
+	{
+		name: 'Notion',
+		url: 'https://www.notion.so',
+		description: 'All-in-one workspace for notes, docs, and projects',
+		category: 'productivity',
+		icon: '📝',
+	},
+	{
+		name: 'Mobbin',
+		url: 'https://mobbin.com',
+		description: 'Mobile app design patterns',
+		category: 'general',
+		icon: '📱',
+	},
+	{
+		name: 'Feather Icons',
+		url: 'https://feathericons.com',
+		description: 'Minimalist icon set',
+		category: 'shapes',
+		icon: '🪶',
+	},
+	{
+		name: 'Adobe Color',
+		url: 'https://color.adobe.com',
+		description: 'Professional color tools and palettes',
+		category: 'colors',
+		icon: '🌈',
+	},
+	{
+		name: 'Lucide',
+		url: 'https://lucide.dev',
+		description: 'Beautiful & consistent icon toolkit',
+		category: 'shapes',
+		icon: '✨',
+	},
+	{
+		name: 'Gradient Hunt',
+		url: 'https://gradienthunt.com',
+		description: 'Beautiful gradient collection',
+		category: 'gradients',
+		icon: '🌈',
+	},
+	{
+		name: 'Dribbble Jobs',
+		url: 'https://dribbble.com/jobs',
+		description: 'Design jobs from top companies worldwide',
+		category: 'jobs',
+		icon: '🏀',
+	},
+	{
+		name: 'Upwork',
+		url: 'https://www.upwork.com',
+		description: 'Freelance design projects and client work',
+		category: 'jobs',
+		icon: '🤝',
+	},
+	{
+		name: 'Fiverr',
+		url: 'https://www.fiverr.com',
+		description: 'Freelance design services and gigs',
+		category: 'jobs',
+		icon: '💰',
+	},
+
+	// Typography
+	{
+		name: 'Fonts Ninja',
+		url: 'https://www.fonts.ninja',
+		description: 'Browser extension to identify fonts on any website',
+		category: 'typography',
+		icon: '🥷',
+	},
+	{
+		name: 'Typespiration',
+		url: 'https://typespiration.com',
+		description: 'Typography inspiration and font combinations',
+		category: 'typography',
+		icon: '✨',
 	},
 	{
 		name: 'Typewolf',
@@ -69,27 +231,6 @@ const inspirationSites: InspirationSite[] = [
 
 	// Colors
 	{
-		name: 'Coolors',
-		url: 'https://coolors.co',
-		description: 'Color palette generator and inspiration',
-		category: 'colors',
-		icon: '🎨',
-	},
-	{
-		name: 'Color Hunt',
-		url: 'https://colorhunt.co',
-		description: 'Curated color palettes',
-		category: 'colors',
-		icon: '🎯',
-	},
-	{
-		name: 'Adobe Color',
-		url: 'https://color.adobe.com',
-		description: 'Professional color tools and palettes',
-		category: 'colors',
-		icon: '🌈',
-	},
-	{
 		name: 'Material Design Colors',
 		url: 'https://m2.material.io/design/color',
 		description: "Google's Material Design color system",
@@ -117,12 +258,77 @@ const inspirationSites: InspirationSite[] = [
 		category: 'colors',
 		icon: '🎨',
 	},
-
-	// Shapes & Icons
 	{
-		name: 'ShapeFactory',
-		url: 'https://shapefactory.co',
-		description: 'Geometric shapes and patterns',
+		name: 'Huemint',
+		url: 'https://huemint.com',
+		description: 'AI-powered color palette generator',
+		category: 'colors',
+		icon: '🤖',
+	},
+
+	// Photos & Stock Images
+	{
+		name: 'Unsplash',
+		url: 'https://unsplash.com',
+		description: 'Beautiful free photos from talented photographers',
+		category: 'photos',
+		icon: '📸',
+	},
+	{
+		name: 'Pexels',
+		url: 'https://www.pexels.com',
+		description: 'Free stock photos and videos',
+		category: 'photos',
+		icon: '🎬',
+	},
+	{
+		name: 'Burst',
+		url: 'https://burst.shopify.com',
+		description: 'Free stock photos for commercial use',
+		category: 'photos',
+		icon: '💥',
+	},
+	{
+		name: 'Pixabay',
+		url: 'https://pixabay.com',
+		description: 'Free images, videos, and music',
+		category: 'photos',
+		icon: '🖼️',
+	},
+	{
+		name: 'StockVault',
+		url: 'https://www.stockvault.net',
+		description: 'Free stock photos and graphics',
+		category: 'photos',
+		icon: '📁',
+	},
+	{
+		name: 'Freepik',
+		url: 'https://www.freepik.com',
+		description: 'Free vectors, stock photos, and PSD files',
+		category: 'photos',
+		icon: '🎨',
+	},
+	{
+		name: 'Shutterstock',
+		url: 'https://www.shutterstock.com',
+		description: 'Premium stock photos, vectors, and illustrations',
+		category: 'photos',
+		icon: '📷',
+	},
+	{
+		name: 'Getty Images',
+		url: 'https://www.gettyimages.com',
+		description: 'Premium stock photography and editorial images',
+		category: 'photos',
+		icon: '🏛️',
+	},
+
+	// Icons & Illustrations
+	{
+		name: 'Material Icons',
+		url: 'https://fonts.google.com/icons',
+		description: 'Google Material Design icons',
 		category: 'shapes',
 		icon: '🔷',
 	},
@@ -134,35 +340,63 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🦸',
 	},
 	{
-		name: 'Feather Icons',
-		url: 'https://feathericons.com',
-		description: 'Minimalist icon set',
-		category: 'shapes',
-		icon: '🪶',
-	},
-	{
-		name: 'Lucide',
-		url: 'https://lucide.dev',
-		description: 'Beautiful & consistent icon toolkit',
-		category: 'shapes',
-		icon: '✨',
-	},
-	{
 		name: 'Phosphor Icons',
 		url: 'https://phosphoricons.com',
 		description: 'Flexible icon family',
 		category: 'shapes',
 		icon: '⚡',
 	},
+	{
+		name: 'iconmonstr',
+		url: 'https://iconmonstr.com',
+		description: 'Free simple icons for your next project',
+		category: 'shapes',
+		icon: '👹',
+	},
+	{
+		name: 'Tabler Icons',
+		url: 'https://tabler-icons.io',
+		description: 'Free and open source icons',
+		category: 'shapes',
+		icon: '📊',
+	},
+	{
+		name: 'Icons8',
+		url: 'https://icons8.com',
+		description: 'Icons, illustrations, and design resources',
+		category: 'shapes',
+		icon: '8️⃣',
+	},
+	{
+		name: 'Flaticon',
+		url: 'https://www.flaticon.com',
+		description: 'Free vector icons and stickers',
+		category: 'shapes',
+		icon: '🎯',
+	},
+	{
+		name: 'Noun Project',
+		url: 'https://thenounproject.com',
+		description: 'Icons for everything',
+		category: 'shapes',
+		icon: '📝',
+	},
+	{
+		name: 'Streamline Icons',
+		url: 'https://streamlineicons.com',
+		description: 'Beautiful icon sets for modern interfaces',
+		category: 'shapes',
+		icon: '🌊',
+	},
+	{
+		name: 'ShapeFactory',
+		url: 'https://shapefactory.co',
+		description: 'Geometric shapes and patterns',
+		category: 'shapes',
+		icon: '🔷',
+	},
 
 	// Gradients
-	{
-		name: 'Gradient Hunt',
-		url: 'https://gradienthunt.com',
-		description: 'Beautiful gradient collection',
-		category: 'gradients',
-		icon: '🌈',
-	},
 	{
 		name: 'UI Gradients',
 		url: 'https://uigradients.com',
@@ -301,6 +535,63 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Mobile app design patterns',
 		category: 'general',
 		icon: '📱',
+	},
+	{
+		name: 'Toggl',
+		url: 'https://toggl.com',
+		description: 'Time tracking tool for freelancers and teams',
+		category: 'productivity',
+		icon: '⏱️',
+	},
+	{
+		name: 'Calendly',
+		url: 'https://calendly.com',
+		description: 'Schedule meetings and appointments easily',
+		category: 'productivity',
+		icon: '📅',
+	},
+	{
+		name: 'Stripe',
+		url: 'https://stripe.com',
+		description: 'Online payment processing for freelancers',
+		category: 'productivity',
+		icon: '💳',
+	},
+	{
+		name: 'Rapid Proposals',
+		url: 'https://rapidproposals.com',
+		description:
+			'AI-powered proposal generator for freelancers - create winning Upwork proposals in seconds',
+		category: 'productivity',
+		icon: '⚡',
+	},
+	{
+		name: 'Slack',
+		url: 'https://slack.com',
+		description: 'Team communication and collaboration platform',
+		category: 'productivity',
+		icon: '💬',
+	},
+	{
+		name: 'Zoom',
+		url: 'https://zoom.us',
+		description: 'Video conferencing and webinars',
+		category: 'productivity',
+		icon: '📹',
+	},
+	{
+		name: 'Dropbox',
+		url: 'https://www.dropbox.com',
+		description: 'Cloud storage and file sharing',
+		category: 'productivity',
+		icon: '📦',
+	},
+	{
+		name: 'Google Drive',
+		url: 'https://drive.google.com',
+		description: 'Cloud storage and collaboration tools',
+		category: 'productivity',
+		icon: '☁️',
 	},
 	{
 		name: 'Godly',
@@ -572,12 +863,208 @@ const inspirationSites: InspirationSite[] = [
 		category: 'brand',
 		icon: '🔤',
 	},
+
+	// Learning & Education
+	{
+		name: 'Skillshare',
+		url: 'https://www.skillshare.com',
+		description: 'Online learning platform for creative skills',
+		category: 'learning',
+		icon: '🎓',
+	},
+	{
+		name: 'Udemy',
+		url: 'https://www.udemy.com',
+		description: 'Online courses for design and development',
+		category: 'learning',
+		icon: '📚',
+	},
+	{
+		name: 'Coursera',
+		url: 'https://www.coursera.org',
+		description: 'University-level design and art courses',
+		category: 'learning',
+		icon: '🎓',
+	},
+	{
+		name: 'YouTube',
+		url: 'https://www.youtube.com',
+		description: 'Free design tutorials and inspiration',
+		category: 'learning',
+		icon: '📺',
+	},
+	{
+		name: 'Design Better',
+		url: 'https://www.designbetter.co',
+		description: 'Design education and resources by InVision',
+		category: 'learning',
+		icon: '✨',
+	},
+	{
+		name: 'Interaction Design Foundation',
+		url: 'https://www.interaction-design.org',
+		description: 'UX/UI design courses and certifications',
+		category: 'learning',
+		icon: '🎯',
+	},
+	{
+		name: 'Canva Design School',
+		url: 'https://www.canva.com/designschool',
+		description: 'Free design tutorials and courses',
+		category: 'learning',
+		icon: '🎨',
+	},
+	{
+		name: 'Adobe Creative Cloud Tutorials',
+		url: 'https://helpx.adobe.com/creative-cloud/tutorials-explained.html',
+		description: 'Official Adobe tutorials for all Creative Cloud apps',
+		category: 'learning',
+		icon: '🎬',
+	},
+
+	// Jobs & Careers
+	{
+		name: 'Awwwards Jobs',
+		url: 'https://www.awwwards.com/jobs',
+		description: 'Premium design jobs from award-winning companies',
+		category: 'jobs',
+		icon: '🏆',
+	},
+	{
+		name: 'Behance Jobs',
+		url: 'https://www.behance.net/joblist',
+		description: 'Creative job opportunities and freelance work',
+		category: 'jobs',
+		icon: '💼',
+	},
+	{
+		name: 'AngelList',
+		url: 'https://angel.co',
+		description: 'Startup jobs and opportunities for designers',
+		category: 'jobs',
+		icon: '👼',
+	},
+	{
+		name: 'Remote.co',
+		url: 'https://remote.co',
+		description: 'Remote design jobs and work opportunities',
+		category: 'jobs',
+		icon: '🏠',
+	},
+	{
+		name: 'We Work Remotely',
+		url: 'https://weworkremotely.com',
+		description: 'Remote design and development jobs',
+		category: 'jobs',
+		icon: '🌐',
+	},
+	{
+		name: 'FlexJobs',
+		url: 'https://www.flexjobs.com',
+		description: 'Flexible and remote design job opportunities',
+		category: 'jobs',
+		icon: '🔄',
+	},
+	{
+		name: '99designs',
+		url: 'https://99designs.com',
+		description: 'Design contests and freelance opportunities',
+		category: 'jobs',
+		icon: '🎨',
+	},
+	{
+		name: 'Toptal',
+		url: 'https://www.toptal.com',
+		description: 'Elite freelance designers and developers',
+		category: 'jobs',
+		icon: '⭐',
+	},
+	{
+		name: 'Freelancer',
+		url: 'https://www.freelancer.com',
+		description: 'Older platform with lower traffic but good backup option',
+		category: 'jobs',
+		icon: '✈️',
+	},
+	{
+		name: 'Flowremote',
+		url: 'https://flowremote.io',
+		description: 'Remote and local jobs for Webflow developers and designers',
+		category: 'jobs',
+		icon: '🌊',
+	},
+	{
+		name: 'Project Pricing Calculator',
+		url: 'https://www.cashyourflow.com',
+		description: 'Free calculator to price your Webflow projects',
+		category: 'jobs',
+		icon: '💰',
+	},
+
+	// Webflow
+	{
+		name: 'Webflow',
+		url: 'https://webflow.com',
+		description: 'Visual web design platform with CMS and hosting',
+		category: 'webflow',
+		icon: '🌊',
+	},
+	{
+		name: 'Webflow University',
+		url: 'https://university.webflow.com',
+		description: 'Official Webflow tutorials and courses',
+		category: 'webflow',
+		icon: '🎓',
+	},
+	{
+		name: 'Webflow Forum',
+		url: 'https://forum.webflow.com',
+		description: 'Community forum for Webflow questions and discussions',
+		category: 'webflow',
+		icon: '💬',
+	},
+	{
+		name: 'Webflow Tools',
+		url: 'https://webflow.com/tools',
+		description: 'Plugins, tools, add-ons, and custom code solutions',
+		category: 'webflow',
+		icon: '🔧',
+	},
+	{
+		name: 'Boosters',
+		url: 'https://boosters.app',
+		description:
+			'Advanced code solutions added directly inside Webflow - 100% Free',
+		category: 'webflow',
+		icon: '⚡',
+	},
+	{
+		name: 'Flowbase',
+		url: 'https://flowbase.co',
+		description: 'Cloneable Webflow assets, templates, guides and videos',
+		category: 'webflow',
+		icon: '📚',
+	},
+	{
+		name: 'Webflow Showcase',
+		url: 'https://webflow.com/made-in-webflow',
+		description: 'Live websites built with Webflow',
+		category: 'webflow',
+		icon: '🏆',
+	},
+	{
+		name: 'Flowremote',
+		url: 'https://flowremote.io',
+		description: 'Remote and local jobs for Webflow developers and designers',
+		category: 'webflow',
+		icon: '💼',
+	},
 ];
 
 const categories = [
 	{
 		id: 'general',
-		name: 'General Design',
+		name: 'Inspiration',
 		icon: Layout,
 		color: 'text-indigo-600',
 	},
@@ -585,9 +1072,15 @@ const categories = [
 	{ id: 'colors', name: 'Colors', icon: Palette, color: 'text-red-600' },
 	{
 		id: 'shapes',
-		name: 'Shapes & Icons',
+		name: 'Icons & Illustrations',
 		icon: Shapes,
 		color: 'text-green-600',
+	},
+	{
+		id: 'photos',
+		name: 'Photos',
+		icon: Camera,
+		color: 'text-amber-600',
 	},
 	{
 		id: 'gradients',
@@ -619,11 +1112,37 @@ const categories = [
 		icon: Palette,
 		color: 'text-emerald-600',
 	},
+	{
+		id: 'productivity',
+		name: 'Productivity',
+		icon: Zap,
+		color: 'text-yellow-600',
+	},
+	{
+		id: 'learning',
+		name: 'Learning',
+		icon: BookOpen,
+		color: 'text-violet-600',
+	},
+	{
+		id: 'jobs',
+		name: 'Jobs',
+		icon: Briefcase,
+		color: 'text-teal-600',
+	},
+	{
+		id: 'webflow',
+		name: 'Webflow',
+		icon: Globe,
+		color: 'text-blue-600',
+	},
 ];
 
 export default function Home() {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedCategory, setSelectedCategory] = useState('all');
+	const [currentPage, setCurrentPage] = useState(1);
+	const itemsPerPage = 12;
 
 	const filteredSites = inspirationSites.filter((site) => {
 		const matchesSearch =
@@ -633,6 +1152,17 @@ export default function Home() {
 			selectedCategory === 'all' || site.category === selectedCategory;
 		return matchesSearch && matchesCategory;
 	});
+
+	// Calculate pagination
+	const totalPages = Math.ceil(filteredSites.length / itemsPerPage);
+	const startIndex = (currentPage - 1) * itemsPerPage;
+	const endIndex = startIndex + itemsPerPage;
+	const currentSites = filteredSites.slice(startIndex, endIndex);
+
+	// Reset to page 1 when search or category changes
+	React.useEffect(() => {
+		setCurrentPage(1);
+	}, [searchTerm, selectedCategory]);
 
 	return (
 		<div className='min-h-screen bg-background'>
@@ -712,7 +1242,7 @@ export default function Home() {
 
 				{/* Inspiration Grid */}
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6'>
-					{filteredSites.map((site, index) => (
+					{currentSites.map((site, index) => (
 						<a
 							key={index}
 							href={site.url}
@@ -738,6 +1268,58 @@ export default function Home() {
 						</a>
 					))}
 				</div>
+
+				{/* Pagination Controls */}
+				{totalPages > 1 && (
+					<div className='flex justify-center items-center space-x-2 mt-8 sm:mt-10'>
+						<button
+							onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+							disabled={currentPage === 1}
+							className='px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer'
+						>
+							Previous
+						</button>
+
+						<div className='flex space-x-1'>
+							{Array.from({ length: totalPages }, (_, i) => i + 1).map(
+								(page) => (
+									<button
+										key={page}
+										onClick={() => setCurrentPage(page)}
+										className={`px-3 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer ${
+											currentPage === page
+												? 'bg-primary text-primary-foreground'
+												: 'text-muted-foreground hover:text-primary hover:bg-muted'
+										}`}
+									>
+										{page}
+									</button>
+								)
+							)}
+						</div>
+
+						<button
+							onClick={() =>
+								setCurrentPage(Math.min(totalPages, currentPage + 1))
+							}
+							disabled={currentPage === totalPages}
+							className='px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer'
+						>
+							Next
+						</button>
+					</div>
+				)}
+
+				{/* Results Info */}
+				{filteredSites.length > 0 && (
+					<div className='text-center mt-4 sm:mt-6'>
+						<p className='text-sm text-muted-foreground'>
+							Showing {startIndex + 1}-
+							{Math.min(endIndex, filteredSites.length)} of{' '}
+							{filteredSites.length} resources
+						</p>
+					</div>
+				)}
 
 				{filteredSites.length === 0 && (
 					<div className='text-center py-16'>
