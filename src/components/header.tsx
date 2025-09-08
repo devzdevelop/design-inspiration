@@ -2,6 +2,7 @@
 
 import { ThemeToggle } from './theme-toggle';
 import {
+	Sparkles,
 	Palette,
 	Type,
 	Shapes,
@@ -13,11 +14,11 @@ import {
 export function Header() {
 	return (
 		<header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
-			<div className='container flex h-16 items-center justify-between'>
+			<div className='w-full px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between'>
 				<div className='flex items-center space-x-2'>
-					<div className='flex items-center space-x-1'>
-						<Palette className='h-6 w-6 text-primary' />
-						<span className='text-xl font-bold'>DesignInspo</span>
+					<div className='flex items-center space-x-2'>
+						<Sparkles className='h-7 w-7 text-primary' />
+						<span className='text-2xl font-bold text-primary'>DesignHub</span>
 					</div>
 				</div>
 
@@ -28,7 +29,7 @@ export function Header() {
 								'[data-category="general"]'
 							);
 							if (filterButtons.length > 0) {
-								filterButtons[0].click();
+								(filterButtons[0] as HTMLButtonElement).click();
 								document
 									.getElementById('filters')
 									?.scrollIntoView({ behavior: 'smooth' });
@@ -46,7 +47,7 @@ export function Header() {
 								'[data-category="typography"]'
 							);
 							if (filterButtons.length > 0) {
-								filterButtons[0].click();
+								(filterButtons[0] as HTMLButtonElement).click();
 								document
 									.getElementById('filters')
 									?.scrollIntoView({ behavior: 'smooth' });
@@ -64,7 +65,7 @@ export function Header() {
 								'[data-category="colors"]'
 							);
 							if (filterButtons.length > 0) {
-								filterButtons[0].click();
+								(filterButtons[0] as HTMLButtonElement).click();
 								document
 									.getElementById('filters')
 									?.scrollIntoView({ behavior: 'smooth' });
@@ -82,7 +83,7 @@ export function Header() {
 								'[data-category="shapes"]'
 							);
 							if (filterButtons.length > 0) {
-								filterButtons[0].click();
+								(filterButtons[0] as HTMLButtonElement).click();
 								document
 									.getElementById('filters')
 									?.scrollIntoView({ behavior: 'smooth' });
@@ -100,7 +101,7 @@ export function Header() {
 								'[data-category="gradients"]'
 							);
 							if (filterButtons.length > 0) {
-								filterButtons[0].click();
+								(filterButtons[0] as HTMLButtonElement).click();
 								document
 									.getElementById('filters')
 									?.scrollIntoView({ behavior: 'smooth' });
@@ -118,7 +119,7 @@ export function Header() {
 								'[data-category="textures"]'
 							);
 							if (filterButtons.length > 0) {
-								filterButtons[0].click();
+								(filterButtons[0] as HTMLButtonElement).click();
 								document
 									.getElementById('filters')
 									?.scrollIntoView({ behavior: 'smooth' });
@@ -128,6 +129,24 @@ export function Header() {
 					>
 						<ImageIcon className='h-4 w-4' />
 						<span>Textures</span>
+						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
+					</button>
+					<button
+						onClick={() => {
+							const filterButtons = document.querySelectorAll(
+								'[data-category="patterns"]'
+							);
+							if (filterButtons.length > 0) {
+								(filterButtons[0] as HTMLButtonElement).click();
+								document
+									.getElementById('filters')
+									?.scrollIntoView({ behavior: 'smooth' });
+							}
+						}}
+						className='flex items-center space-x-1 text-sm font-medium hover:text-primary transition-colors cursor-pointer relative group'
+					>
+						<Layers className='h-4 w-4' />
+						<span>Patterns</span>
 						<div className='absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full'></div>
 					</button>
 				</nav>

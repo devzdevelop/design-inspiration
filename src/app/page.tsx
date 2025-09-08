@@ -59,6 +59,13 @@ const inspirationSites: InspirationSite[] = [
 		category: 'typography',
 		icon: '⚖️',
 	},
+	{
+		name: 'Font Squirrel',
+		url: 'https://www.fontsquirrel.com',
+		description: 'Free fonts with commercial licenses',
+		category: 'typography',
+		icon: '🐿️',
+	},
 
 	// Colors
 	{
@@ -95,6 +102,20 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Advanced color picker and gradient tools',
 		category: 'colors',
 		icon: '🦎',
+	},
+	{
+		name: 'ColorSpace',
+		url: 'https://mycolor.space',
+		description: 'Generate beautiful color palettes',
+		category: 'colors',
+		icon: '🚀',
+	},
+	{
+		name: 'Paletton',
+		url: 'https://paletton.com',
+		description: 'Color scheme designer and palette generator',
+		category: 'colors',
+		icon: '🎨',
 	},
 
 	// Shapes & Icons
@@ -164,34 +185,85 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🪄',
 	},
 
-	// Textures & Patterns
+	// Textures
+	{
+		name: 'Transparent Textures',
+		url: 'https://www.transparenttextures.com',
+		description: 'Free transparent textures for web design',
+		category: 'textures',
+		icon: '✨',
+	},
+	{
+		name: 'Texture Haven',
+		url: 'https://texturehaven.com',
+		description: 'Free high-resolution textures',
+		category: 'textures',
+		icon: '🏠',
+	},
+	{
+		name: 'Freepik Textures',
+		url: 'https://www.freepik.com/textures',
+		description: 'Professional texture collection',
+		category: 'textures',
+		icon: '🎨',
+	},
+	{
+		name: 'Texture King',
+		url: 'https://www.textureking.com',
+		description: 'High-quality texture resources',
+		category: 'textures',
+		icon: '🧱',
+	},
+
+	// Patterns
 	{
 		name: 'Subtle Patterns',
 		url: 'https://www.toptal.com/designers/subtlepatterns',
-		description: 'High-quality subtle patterns',
-		category: 'textures',
+		description: 'Free seamless patterns for web & Figma',
+		category: 'patterns',
 		icon: '🔳',
+	},
+	{
+		name: 'Hero Patterns',
+		url: 'https://heropatterns.com',
+		description: 'Customizable SVG patterns for backgrounds',
+		category: 'patterns',
+		icon: '🦸',
+	},
+	{
+		name: 'Patterninja',
+		url: 'https://patterninja.com',
+		description: 'Create and export patterns for Figma',
+		category: 'patterns',
+		icon: '🎯',
 	},
 	{
 		name: 'Pattern Library',
 		url: 'https://thepatternlibrary.com',
 		description: 'Curated pattern collection',
-		category: 'textures',
+		category: 'patterns',
 		icon: '📚',
-	},
-	{
-		name: 'Hero Patterns',
-		url: 'https://heropatterns.com',
-		description: 'Free SVG background patterns',
-		category: 'textures',
-		icon: '🦸',
 	},
 	{
 		name: 'Pattern Monster',
 		url: 'https://patternmonster.com',
 		description: 'Free vector patterns',
-		category: 'textures',
+		category: 'patterns',
 		icon: '👹',
+	},
+	{
+		name: 'Patternico',
+		url: 'https://patternico.com',
+		description: 'Free seamless pattern generator',
+		category: 'patterns',
+		icon: '🎨',
+	},
+	{
+		name: 'Patternify',
+		url: 'https://www.patternify.com',
+		description: 'Create CSS patterns online',
+		category: 'patterns',
+		icon: '🔧',
 	},
 
 	// General Design
@@ -350,6 +422,12 @@ const categories = [
 		icon: ImageIcon,
 		color: 'text-orange-600',
 	},
+	{
+		id: 'patterns',
+		name: 'Patterns',
+		icon: Layers,
+		color: 'text-pink-600',
+	},
 ];
 
 export default function Home() {
@@ -373,13 +451,11 @@ export default function Home() {
 				{/* Hero Section */}
 				<div className='text-center py-16'>
 					<div className='flex items-center justify-center mb-6'>
-						<Sparkles className='h-12 w-12 text-primary mr-4' />
-						<h1 className='text-5xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent'>
-							DesignInspo
-						</h1>
+						<Sparkles className='h-16 w-16 text-primary mr-6' />
+						<h1 className='text-7xl font-bold text-primary'>DesignHub</h1>
 					</div>
-					<p className='text-xl text-muted-foreground mb-8 max-w-2xl mx-auto'>
-						Your centralized hub for design inspiration. Discover the best
+					<p className='text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto font-medium'>
+						Your ultimate destination for design inspiration. Discover the best
 						websites for typography, colors, shapes, gradients, textures, and
 						more.
 					</p>
