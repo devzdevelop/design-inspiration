@@ -1066,9 +1066,9 @@ const categories = [
 		id: 'general',
 		name: 'Inspiration',
 		icon: Layout,
-		color: 'text-indigo-600',
+		color: 'text-primary',
 	},
-	{ id: 'typography', name: 'Typography', icon: Type, color: 'text-blue-600' },
+	{ id: 'typography', name: 'Typography', icon: Type, color: 'text-primary' },
 	{ id: 'colors', name: 'Colors', icon: Palette, color: 'text-red-600' },
 	{
 		id: 'shapes',
@@ -1134,7 +1134,7 @@ const categories = [
 		id: 'webflow',
 		name: 'Webflow',
 		icon: Globe,
-		color: 'text-blue-600',
+		color: 'text-primary',
 	},
 ];
 
@@ -1164,7 +1164,7 @@ export default function Home() {
 		setCurrentPage(1);
 	}, [searchTerm, selectedCategory]);
 
-	return (
+  return (
 		<div className='min-h-screen bg-background'>
 			<Header />
 
@@ -1267,7 +1267,7 @@ export default function Home() {
 							</span>
 						</a>
 					))}
-				</div>
+        </div>
 
 				{/* Pagination Controls */}
 				{totalPages > 1 && (
@@ -1275,7 +1275,7 @@ export default function Home() {
 						<button
 							onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
 							disabled={currentPage === 1}
-							className='px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer'
+							className='px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer rounded-md'
 						>
 							Previous
 						</button>
@@ -1286,10 +1286,10 @@ export default function Home() {
 									<button
 										key={page}
 										onClick={() => setCurrentPage(page)}
-										className={`px-3 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer ${
+										className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 cursor-pointer ${
 											currentPage === page
-												? 'bg-primary text-primary-foreground'
-												: 'text-muted-foreground hover:text-primary hover:bg-muted'
+												? 'bg-primary text-primary-foreground shadow-md'
+												: 'text-muted-foreground hover:text-primary hover:bg-muted hover:shadow-sm'
 										}`}
 									>
 										{page}
@@ -1303,7 +1303,7 @@ export default function Home() {
 								setCurrentPage(Math.min(totalPages, currentPage + 1))
 							}
 							disabled={currentPage === totalPages}
-							className='px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer'
+							className='px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 cursor-pointer rounded-md'
 						>
 							Next
 						</button>
@@ -1340,7 +1340,7 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-			</footer>
-		</div>
-	);
+      </footer>
+    </div>
+  );
 }
