@@ -358,20 +358,6 @@ const inspirationSites: InspirationSite[] = [
 
 	// Icons & Illustrations
 	{
-		name: 'Material Icons',
-		url: 'https://fonts.google.com/icons',
-		description: 'Google Material Design icons',
-		category: 'shapes',
-		icon: '🔷',
-	},
-	{
-		name: 'Heroicons',
-		url: 'https://heroicons.com',
-		description: 'Beautiful hand-crafted SVG icons',
-		category: 'shapes',
-		icon: '🦸',
-	},
-	{
 		name: 'Phosphor Icons',
 		url: 'https://phosphoricons.com',
 		description: 'Flexible icon family',
@@ -533,42 +519,6 @@ const inspirationSites: InspirationSite[] = [
 	},
 
 	// General Design
-	{
-		name: 'Dribbble',
-		url: 'https://dribbble.com',
-		description: "Discover the world's top designers & creatives",
-		category: 'general',
-		icon: '🏀',
-	},
-	{
-		name: 'Behance',
-		url: 'https://www.behance.net',
-		description: 'Showcase and discover creative work',
-		category: 'general',
-		icon: '💼',
-	},
-	{
-		name: 'MaxiBestOf',
-		url: 'https://maxibestof.one',
-		description:
-			'Daily website design inspiration feed with 12,500+ UI components',
-		category: 'general',
-		icon: '⭐',
-	},
-	{
-		name: 'Awwwards',
-		url: 'https://www.awwwards.com',
-		description: 'The awards for design, creativity and innovation',
-		category: 'general',
-		icon: '🏆',
-	},
-	{
-		name: 'Pinterest',
-		url: 'https://pinterest.com',
-		description: 'Visual discovery platform for design inspiration',
-		category: 'general',
-		icon: '📌',
-	},
 	{
 		name: 'Mobbin',
 		url: 'https://mobbin.com',
@@ -736,20 +686,6 @@ const inspirationSites: InspirationSite[] = [
 		description: 'E-commerce design inspiration and examples',
 		category: 'general',
 		icon: '🛒',
-	},
-	{
-		name: 'Designmodo',
-		url: 'https://designmodo.com',
-		description: 'UI kits, frameworks, and design inspiration',
-		category: 'general',
-		icon: '🎨',
-	},
-	{
-		name: 'Limitless',
-		url: 'https://limitless.website',
-		description: 'Unlimited design inspiration for creative minds',
-		category: 'general',
-		icon: '♾️',
 	},
 
 	// 3D Web Design
@@ -929,20 +865,6 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Free official brand color palettes and hex codes',
 		category: 'brand',
 		icon: '🎨',
-	},
-	{
-		name: 'Google Fonts',
-		url: 'https://fonts.google.com',
-		description: 'Free typography for brand identity',
-		category: 'brand',
-		icon: '📝',
-	},
-	{
-		name: 'Font Squirrel',
-		url: 'https://www.fontsquirrel.com',
-		description: 'Free commercial-use fonts for brands',
-		category: 'brand',
-		icon: '🔤',
 	},
 
 	// Learning & Education
@@ -1133,13 +1055,6 @@ const inspirationSites: InspirationSite[] = [
 		category: 'webflow',
 		icon: '🏆',
 	},
-	{
-		name: 'Flowremote',
-		url: 'https://flowremote.io',
-		description: 'Remote and local jobs for Webflow developers and designers',
-		category: 'webflow',
-		icon: '💼',
-	},
 
 	// Font Foundries
 	{
@@ -1204,13 +1119,6 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Curated collection of open-source fonts',
 		category: 'foundries',
 		icon: '📚',
-	},
-	{
-		name: 'Google Fonts',
-		url: 'https://fonts.google.com',
-		description: 'Free web fonts for everyone',
-		category: 'foundries',
-		icon: '🔍',
 	},
 	{
 		name: 'Grilli Type',
