@@ -342,6 +342,14 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🎨',
 	},
 	{
+		name: 'Death to Stock Photo',
+		url: 'https://www.deathtothestockphoto.com',
+		description:
+			'Trend-focused premium stock photos and videos with unlimited downloads',
+		category: 'photos',
+		icon: '💀',
+	},
+	{
 		name: 'Shutterstock',
 		url: 'https://www.shutterstock.com',
 		description: 'Premium stock photos, vectors, and illustrations',
@@ -1285,9 +1293,9 @@ export default function Home() {
 							className='h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16'
 							style={{ color: '#6366f1' }}
 						/>
-					<h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-primary'>
-						DesignovaHub
-					</h1>
+						<h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-primary'>
+							DesignovaHub
+						</h1>
 					</div>
 					<p className='text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto font-medium px-4'>
 						Your comprehensive design toolkit. Discover inspiration, tools, and
