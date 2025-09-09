@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -14,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'DesignHub - Your Centralized Design Inspiration Hub',
+	title: 'DesignovaHub - Your Centralized Design Inspiration Hub',
 	description:
-		'Discover the best design inspiration websites for typography, colors, shapes, gradients, textures, and more. Your one-stop destination for creative inspiration.',
+		'Your comprehensive design toolkit. Discover inspiration, tools, and resources for typography, colors, 3D design, brand assets, and everything you need to create amazing designs.',
 	icons: {
 		icon: '/favicon.svg',
 		shortcut: '/favicon.svg',
@@ -45,6 +47,8 @@ export default function RootLayout({
 				>
 					{children}
 				</ThemeProvider>
+				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);

@@ -1,8 +1,8 @@
-# DesignInspo 🎨
+# DesignovaHub 🎨
 
 A beautiful, centralized landing page for design inspiration. Find the best websites for typography, colors, shapes, gradients, textures, and more - all in one place!
 
-![DesignInspo Preview](https://via.placeholder.com/800x400/6366f1/ffffff?text=DesignInspo+Preview)
+![DesignovaHub Preview](https://via.placeholder.com/800x400/6366f1/ffffff?text=DesignovaHub+Preview)
 
 ## ✨ Features
 
@@ -78,8 +78,8 @@ A beautiful, centralized landing page for design inspiration. Find the best webs
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/design-inspiration.git
-cd design-inspiration
+git clone https://github.com/yourusername/designovahub.git
+cd designovahub
 ```
 
 2. Install dependencies:
@@ -97,7 +97,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-design-inspiration/
+designovahub/
 ├── src/
 │   ├── app/
 │   │   ├── globals.css      # Global styles and CSS variables

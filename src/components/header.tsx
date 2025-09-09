@@ -21,7 +21,7 @@ export function Header() {
 							className='h-7 w-7'
 							style={{ color: '#6366f1' }}
 						/>
-						<span className='text-2xl font-bold text-primary'>DesignHub</span>
+						<span className='text-2xl font-bold text-primary'>DesignovaHub</span>
 					</div>
 				</div>
 
