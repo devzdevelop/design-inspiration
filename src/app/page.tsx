@@ -58,6 +58,13 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🔤',
 	},
 	{
+		name: 'Adobe Fonts',
+		url: 'https://fonts.adobe.com',
+		description: 'Over 30,000 premium fonts for personal and commercial use',
+		category: 'typography',
+		icon: '🎨',
+	},
+	{
 		name: 'Unsplash',
 		url: 'https://unsplash.com',
 		description: 'Beautiful free photos from talented photographers',
@@ -589,6 +596,13 @@ const inspirationSites: InspirationSite[] = [
 		description: 'Anthropic AI assistant for creative and analytical tasks',
 		category: 'productivity',
 		icon: '🤖',
+	},
+	{
+		name: 'MyMind',
+		url: 'https://mymind.com',
+		description: 'AI-powered private space to save and organize design inspiration',
+		category: 'productivity',
+		icon: '🧠',
 	},
 	{
 		name: 'Perplexity',
