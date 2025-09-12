@@ -51,6 +51,35 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🏀',
 	},
 	{
+		name: 'Behance',
+		url: 'https://www.behance.net',
+		description: 'Showcase and discover creative work',
+		category: 'general',
+		icon: '💼',
+	},
+	{
+		name: 'Awwwards',
+		url: 'https://www.awwwards.com',
+		description: 'The awards for design, creativity and innovation',
+		category: 'general',
+		icon: '🏆',
+	},
+	{
+		name: 'Pinterest',
+		url: 'https://pinterest.com',
+		description: 'Visual discovery platform for design inspiration',
+		category: 'general',
+		icon: '📌',
+	},
+	{
+		name: 'Envato',
+		url: 'https://envato.com',
+		description:
+			'Digital marketplace for themes, graphics, photos, and creative assets',
+		category: 'general',
+		icon: '🎨',
+	},
+	{
 		name: 'Google Fonts',
 		url: 'https://fonts.google.com',
 		description: 'Extensive collection of free web fonts',
@@ -79,13 +108,6 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🎨',
 	},
 	{
-		name: 'Behance',
-		url: 'https://www.behance.net',
-		description: 'Showcase and discover creative work',
-		category: 'general',
-		icon: '💼',
-	},
-	{
 		name: 'Material Icons',
 		url: 'https://fonts.google.com/icons',
 		description: 'Google Material Design icons',
@@ -100,25 +122,11 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🎬',
 	},
 	{
-		name: 'Awwwards',
-		url: 'https://www.awwwards.com',
-		description: 'The awards for design, creativity and innovation',
-		category: 'general',
-		icon: '🏆',
-	},
-	{
 		name: 'Heroicons',
 		url: 'https://heroicons.com',
 		description: 'Beautiful hand-crafted SVG icons',
 		category: 'shapes',
 		icon: '🦸',
-	},
-	{
-		name: 'Pinterest',
-		url: 'https://pinterest.com',
-		description: 'Visual discovery platform for design inspiration',
-		category: 'general',
-		icon: '📌',
 	},
 	{
 		name: 'Color Hunt',
@@ -204,10 +212,11 @@ const inspirationSites: InspirationSite[] = [
 	},
 	{
 		name: 'Fiverr',
-		url: 'https://www.fiverr.com',
+		url: 'https://go.fiverr.com/visit/?bta=1144349&brand=fiverrmarketplace',
 		description: 'Freelance design services and gigs',
 		category: 'jobs',
 		icon: '💰',
+		isAffiliate: true,
 	},
 
 	// Typography
@@ -600,7 +609,8 @@ const inspirationSites: InspirationSite[] = [
 	{
 		name: 'MyMind',
 		url: 'https://mymind.com',
-		description: 'AI-powered private space to save and organize design inspiration',
+		description:
+			'AI-powered private space to save and organize design inspiration',
 		category: 'productivity',
 		icon: '🧠',
 	},
@@ -963,11 +973,12 @@ const inspirationSites: InspirationSite[] = [
 		icon: '💼',
 	},
 	{
-		name: 'AngelList',
-		url: 'https://angel.co',
-		description: 'Startup jobs and opportunities for designers',
+		name: 'Wellfound',
+		url: 'https://wellfound.com/l/2zvfff',
+		description: 'Startup jobs and opportunities for designers and developers',
 		category: 'jobs',
-		icon: '👼',
+		icon: '🚀',
+		isAffiliate: true,
 	},
 	{
 		name: 'Remote.co',
@@ -1006,10 +1017,11 @@ const inspirationSites: InspirationSite[] = [
 	},
 	{
 		name: 'Freelancer',
-		url: 'https://www.freelancer.com',
-		description: 'Older platform with lower traffic but good backup option',
+		url: 'https://www.freelancer.com/get/devzdevelop?f=give',
+		description: 'Global freelance marketplace with millions of projects',
 		category: 'jobs',
 		icon: '✈️',
+		isAffiliate: true,
 	},
 	{
 		name: 'Flowremote',
