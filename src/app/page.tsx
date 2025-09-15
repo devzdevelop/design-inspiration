@@ -631,9 +631,12 @@ const inspirationSites: InspirationSite[] = [
 	{
 		name: 'Relume',
 		url: 'https://relume.io',
+		affiliateUrl:
+			'https://www.relume.io?utm_source=referral&referralCode=050cd479',
 		description: 'AI-powered design tool with vast prebuilt components library',
 		category: 'productivity',
 		icon: '🎨',
+		isAffiliate: true,
 	},
 	{
 		name: 'Godly',
