@@ -729,6 +729,14 @@ const inspirationSites: InspirationSite[] = [
 		icon: '🎨',
 	},
 	{
+		name: 'Unicorn Studio',
+		url: 'https://www.unicorn.studio/',
+		description:
+			'No-code WebGL tool for creating stunning interactive 3D experiences',
+		category: '3d',
+		icon: '🦄',
+	},
+	{
 		name: 'Three.js',
 		url: 'https://threejs.org',
 		description: 'JavaScript 3D library for web development',
